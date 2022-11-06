@@ -2,8 +2,7 @@
 
 import pytesseract
 import cv2
-img = cv2.imread('test.png')
-# img = cv2.imread('../P&ID/png/SIMPLE-3-1.png')
+img = cv2.imread('../P&ID/png/SIMPLE-5-1.png')
 cv2.imshow('Initial image', img)
 # pytesseract error on Windows, Set the tesseract path in the script before calling
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
@@ -21,14 +20,11 @@ else:
     text_splitted_new = []
     for i in range(0,len(text_splitted)):
 
-        print("ee",text_splitted[i])
         text_splitted_new.append(text_splitted[i].replace(" ", ""))
     # text_splitted_line_and_enter = text.split("\n\n") # Pas fiable lorsque le texte est trop petit
     text_splitted_localisation = text_splitted # avec les 2 pt extremes du mot, et creation rectangle
     # Récupérer la position de chaque lettre des textes de l'image
     boxes = pytesseract.image_to_boxes(img)
-
-    print("Separer chaque mot",text_splitted_new) 
 
     # Récupérer coordonnée rectangle de chaque mot
     list = []
@@ -95,7 +91,7 @@ else:
         x, y, w, h = int(b[1]), int(b[2]), int(b[3]), int(b[4])
         # Récupération de la coordonnée x1 (x du premier caractere), y2 (y du second caractere)
 
-        if b[0]=="O" or b[0]=="—" or b[0]==">" or b[0]=="P" or b[0]=="x" or b[0]=="t" or b[0]=="~": #or b[0]==">" Filtrage pour ne pas delete valve ..
+        if b[0]=="~" or b[0]=="> ": #or b[0]==">" Filtrage pour ne pas delete valve ..
             pass
         # Ignorer si le caractere est if b[0]!="~" : and b[0]!="‘" and b[0]!="O" and b[0]!="e" and b[0]!="p" and b[0]!="C"
         else:
