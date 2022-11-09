@@ -5,7 +5,7 @@ import cv2
 img = cv2.imread('../P&ID/png/SIMPLE-14-1.png')
 cv2.imshow('Initial image', img)
 # pytesseract error on Windows, Set the tesseract path in the script before calling
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+#pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 # Mauvais chemin d'image
 if img is None:
     print('Wrong path')
