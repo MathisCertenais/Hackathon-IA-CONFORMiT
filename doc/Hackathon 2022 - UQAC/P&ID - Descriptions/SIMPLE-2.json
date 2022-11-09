@@ -1,0 +1,25 @@
+[
+    { 
+        "type:": "machine",
+        "machine": "pump",
+        "name": "PMP-001",
+        "input":[
+            {
+                "type": "device",
+                "device" : "valve",
+                "name" : "PMP-001-MV-001",
+                "input": [ "Eau"],
+                "output": [ { "name": "PMP-001"}]
+            }
+        ],
+        "output": [
+            {
+                "type": "device",
+                "device" : "valve",
+                "name" : "PMP-001-MV-002",
+                "input": [ { "name": "PMP-001"}],
+                "output": [ "Eau"]
+            }
+        ]
+    }
+]

@@ -1,0 +1,139 @@
+[
+    {
+        "type":"machine",
+        "machine":"pump",
+        "name":"Pompe LVSP-PU-001",
+        "input":[
+            {
+                "type":"device",
+                "device":"switch",
+                "name":"Sectionneur Local (600V) LVSP-LD-211",
+                "input":[""],
+                "output":[{"name":"Pompe LVSP-PU-001"}]
+            },
+            "Eau"
+        ],
+        "output":[
+            {
+                "type":"device",
+                "device":"valve",
+                "name":"Valve manuelle (eau) LVSP-MV-030",
+                "input":[{"name":"Pompe LVSP-PU-001"}],
+                "output":[
+                    {
+                        "type":"machine",
+                        "machine":"filter",
+                        "name":"Filtre LVSP-FL-001",
+                        "input":[{"name":"Pompe LVSP-PU-001"}],
+                        "output":[
+                            {
+                                "type":"device",
+                                "device":"valve",
+                                "name":"Valve manuelle LVSP-MV-031",
+                                "input":[{"name":"Filtre LVSP-FL-001"}],
+                                "output":[{
+                                    "type":"machine",
+                                    "machine":"machine",
+                                    "name":"Appareil de nettoyage LSVP-AND-001",
+                                    "input":[
+                                        {"name":"Valve manuelle LVSP-MV-031"}, 
+                                        {"name":"Valve manuelle (eau) LVSP-MV-032"},
+                                        {"name":"Sectionneur Local (600V) LVSP-LD-212"}
+                                    ],
+                                    "output":[]
+                                }]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type":"device",
+                "device":"valve",
+                "name":"Valve manuelle (eau) LVSP-MV-032",
+                "input":[{"name":"Pompe LVSP-PU-001"}],
+                "output":[{"name":"Appareil de nettoyage LSVP-AND-001"}]
+            }
+        ]
+    },
+    {
+        "type":"machine",
+        "machine":"pump",
+        "name":"Pompe LVSP-PU-003",
+        "input":[
+            {
+                "type":"device",
+                "device":"switch",
+                "name":"Sectionneur Local (600V) LVSP-LD-214",
+                "input":[""],
+                "output":[{"name":"Pompe LVSP-PU-003"}]
+            },
+            {
+                "type":"device",
+                "device":"valve",
+                "name":"Valve manuelle (eau) LVSP-MV-035",
+                "input":[
+                    {
+                        "type":"machine",
+                        "machine":"machine",
+                        "name":"Traitement des eaux usées LVSP-TEU-13",
+                        "output":[
+                            {"name":"Valve manuelle (eau) LVSP-MV-035"}
+                        ],
+                        "input":[
+                            {
+                                "type":"device",
+                                "device":"valve",
+                                "name":"Valve manuelle (eau) LVSP-MV-034",
+                                "input":[
+                                    {
+                                        "type":"machine",
+                                        "machine":"pump",
+                                        "name":"Pompe LVSP-PU-002",
+                                        "input":[
+                                            {
+                                                "type":"device",
+                                                "device":"switch",
+                                                "name":"Sectionneur Local (600V) LVSP-LD-212",
+                                                "input":[""],
+                                                "output":[{"name":"Pompe LVSP-PU-002"}]
+                                            },
+                                            {
+                                                "type":"device",
+                                                "device":"valve",
+                                                "name":"Valve manuelle (eau) LVSP-MV-033",
+                                                "input":[{
+                                                    "type":"machine",
+                                                    "machine":"machine",
+                                                    "name":"Réservoir de rétention des eaux usées",
+                                                    "input":[],
+                                                    "output":[
+                                                        {"name":"Valve manuelle (eau) LVSP-MV-033"}
+                                                    ]
+                                                }],
+                                                "output":[{"name":"Pompe LVSP-PU-002"}]
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "output":[{"name":"Traitement des eaux usées LVSP-TEU-13"}]
+                            }
+                        ]
+                    }
+                ],
+                "output":[{"name":"Pompe LVSP-PU-003"}]
+            }
+        ],
+        "output":[
+            {
+                "type":"device",
+                "device":"valve",
+                "name":"Valve manuelle (eau) LVSP-MV-036",
+                "input":[{
+                    "name":"Pompe LVSP-PU-003"
+                }],
+                "output":["Eau"]
+            }
+        ]
+    }
+]

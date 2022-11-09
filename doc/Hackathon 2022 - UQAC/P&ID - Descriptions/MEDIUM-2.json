@@ -1,0 +1,24 @@
+[
+    {
+        "type":"machine",
+        "machine":"conveyor",
+        "name":"",
+        "input":[],
+        "output":[
+            {
+                "type":"machine",
+                "machine":"crusher_jaw",
+                "name":"",
+                "input":[{"name":""}],
+                "output":[]
+            }
+        ]
+    },
+    {
+        "type":"device",
+        "device":"truck_industrial",
+        "name":"",
+        "input":[],
+        "output":["Roches"]
+    }
+]

@@ -1,0 +1,23 @@
+[
+    { 
+        "type:": "machine",
+        "machine": "pump",
+        "name": "PMP-14",
+        "input":[
+            {
+                "type": "device",
+                "device": "valve",
+                "name": "VM-13",
+                "input":[{
+                    "type":"machine",
+                    "machine":"tank",
+                    "name":"TNK-51",
+                    "input":[],
+                    "output":[{"name":"VM-13"}]
+                }],
+                "output":[{"name":"PMP-14"}]
+            }
+        ],
+        "output": [""]
+    }
+]

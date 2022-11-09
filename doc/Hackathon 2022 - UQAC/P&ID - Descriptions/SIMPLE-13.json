@@ -1,0 +1,25 @@
+[
+    { 
+        "type:": "machine",
+        "machine": "pump",
+        "name": "",
+        "input":[
+            {
+                "type": "device",
+                "device": "valve",
+                "name": "BV-461",
+                "input":["Carburant"],
+                "output":[{"name":""}]
+            }
+        ],
+        "output": [
+            {
+                "type": "device",
+                "device": "valve",
+                "name": "BV-123",
+                "input":[{"name":""}],
+                "output":[""]
+            }
+        ]
+    }
+]

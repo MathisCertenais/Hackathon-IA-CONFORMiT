@@ -1,0 +1,55 @@
+[
+    {
+        "type":"machine",
+        "machine":"tank",
+        "name":"Réservoir TK-001",
+        "input":[
+            {
+                "type:": "machine",
+                "machine": "agitator",
+                "name": "AG-001",
+                "input":[
+                    {
+                        "type": "device",
+                        "device": "switch",
+                        "name": "SL-212",
+                        "input":["600 volts"],
+                        "output":[{"name":"AG-001"}]
+                    }
+                ],
+                "output": []
+            },
+            {
+                "type":"device",
+                "device":"valve",
+                "name":"VM-003",
+                "input":["Eau"],
+                "output":[{"name":"Réservoir TK-001"}]
+            },
+            {
+                "type":"device",
+                "device":"valve",
+                "name":"VM-004",
+                "input":["Acide 95%"],
+                "output":[{"name":"Réservoir TK-001"}]
+            }
+        ],
+        "output":["Acide 12%"]
+    },
+    {
+        "type":"machine",
+        "machine":"pump",
+        "name":"PMP-002",
+        "input":[
+            "Acide 12%",
+            {
+                "type":"device",
+                "device":"switch",
+                "name":"SL-212",
+                "input":["600 volts"],
+                "output":[{"name":"PMP-002"}]
+            }
+        ],
+        "output":["Acide 12%"]
+    }
+]

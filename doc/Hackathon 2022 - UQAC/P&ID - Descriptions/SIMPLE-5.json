@@ -1,0 +1,25 @@
+[
+    { 
+        "type:": "machine",
+        "machine": "mixer",
+        "name": "MX-121",
+        "input":[
+            {
+                "type": "device",
+                "device": "valve",
+                "name": "VL-05",
+                "input":[ "Noix" ],
+                "output":[{"name":"MX-121"}]
+            }
+        ],
+        "output": [ 
+            {
+                "type": "machine",
+                "machine": "vessel",
+                "name": "",
+                "input":[ "Pâte de noix" ],
+                "output":[]
+            }
+        ]
+    }
+]

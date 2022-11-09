@@ -1,0 +1,87 @@
+[
+    {
+        "type":"machine",
+        "machine":"conveyor",
+        "name":"Convoyeur C1",
+        "input":[
+            {
+                "type":"machine",
+                "machine":"motor",
+                "name":"",
+                "input":[],
+                "output":[
+                    {"name":"Convoyeur C1"},
+                    {
+                        "type":"device",
+                        "device":"ZY",
+                        "name":"ZY-103",
+                        "input":[{"name":""}],
+                        "output":[
+                            {
+                                "type":"device",
+                                "device": "computer_logic",
+                                "name":"YIC-1",
+                                "input":[{"name":"ZY-103"}],
+                                "output":[
+                                    {
+                                        "type":"device",
+                                        "device":"ZT-1",
+                                        "name":"ZT-1-103",
+                                        "input":[{"name":"YIC-1"}],
+                                        "output":[{"name":"Convoyeur C1"}]
+                                    },
+                                    {
+                                        "type":"device",
+                                        "device":"ZT-2",
+                                        "name":"ZT-2-103",
+                                        "input":[{"name":"YIC-1"}],
+                                        "output":[{"name":"Convoyeur C1"}]
+                                    },
+                                    {
+                                        "type":"device",
+                                        "device":"ZT-3",
+                                        "name":"ZT-3-103",
+                                        "input":[{"name":"YIC-1"}],
+                                        "output":[{"name":"Convoyeur C1"}]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type":"item",
+        "item":"Bouteille",
+        "name":"T1",
+        "input":[
+            {
+                "type":"device",
+                "device":"valve",
+                "name":"VL-05",
+                "input":[""],
+                "output":[{"name":"T1"}]
+            }
+        ],
+        "output":[]
+    },
+    {
+        "type":"device",
+        "device": "computer_logic",
+        "name":"YIC-2",
+        "input":[],
+        "output":[
+            {"name":"VL-05"},
+            {
+                "type":"device",
+                "device":"LT",
+                "name":"LT-104",
+                "input":[{"name":"YIC-2"}],
+                "output":[{"name":"T1"}]
+            }
+        ]
+    }
+
+]

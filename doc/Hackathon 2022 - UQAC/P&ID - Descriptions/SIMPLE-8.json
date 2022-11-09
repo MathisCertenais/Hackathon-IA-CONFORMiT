@@ -1,0 +1,31 @@
+[
+    { 
+        "type:": "machine",
+        "machine": "tank",
+        "name": "TNK-50",
+        "input":[
+            {
+                "type": "device",
+                "device": "valve",
+                "name": "",
+                "input":[ "Colorant" ],
+                "output":[{"name":"TNK-50"}]
+            },
+            {
+                "type": "device",
+                "device": "valve",
+                "name": "",
+                "input":[ "Acide 5%" ],
+                "output":[{"name":"TNK-50"}]
+            }
+        ],
+        "output": [ 
+            {
+                "type":"machine",
+                "machine":"boat",
+                "name":"",
+                "input":[ { "name":"TNK-50"}]
+            }
+        ]
+    }
+]

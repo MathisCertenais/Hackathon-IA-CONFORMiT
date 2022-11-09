@@ -1,0 +1,24 @@
+[
+    { 
+        "type:": "machine",
+        "machine": "fan",
+        "name": "",
+        "input":[
+            {
+                "type": "machine",
+                "machine": "motor",
+                "name": "MOTOR-90",
+                "input":[],
+                "output":[{"name":""}]
+            },
+            {
+                "type": "device",
+                "device": "switch",
+                "name": "NT-56",
+                "input":[ "130 volts"],
+                "output":[{"name":""}]
+            }
+        ],
+        "output": []
+    }
+]

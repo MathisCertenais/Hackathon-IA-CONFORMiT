@@ -1,0 +1,17 @@
+[
+    { 
+        "type:": "machine",
+        "machine": "separator_gravity",
+        "name": "",
+        "input":[
+            {
+                "type": "device",
+                "device": "valve",
+                "name": "VB-99",
+                "input":[""],
+                "output":[{"name":""}]
+            }
+        ],
+        "output": ["Résidus solides", "Résidus liquides"]
+    }
+]

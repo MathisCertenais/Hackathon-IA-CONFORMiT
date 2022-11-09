@@ -1,0 +1,40 @@
+[
+    { 
+        "type:": "machine",
+        "machine": "tank",
+        "name": "TK-075",
+        "input":[
+            {
+                "type": "device",
+                "device": "valve",
+                "name": "VM-006",
+                "input":[""],
+                "output":[{"name":"TK-075"}]
+            }
+        ],
+        "output": [
+            {
+                "type": "device",
+                "device": "valve",
+                "name": "VM-025",
+                "input":[{"name":"TK-075"}],
+                "output":[""]
+            },
+            {
+                "type": "device",
+                "device": "valve",
+                "name": "DV-001",
+                "input":[{"name":"TK-075"}],
+                "output":[
+                    {
+                        "type": "device",
+                        "device": "funnel",
+                        "name": "",
+                        "input":[{"name":"DV-001"}],
+                        "output":[]
+                    }
+                ]
+            }
+        ]
+    }
+]

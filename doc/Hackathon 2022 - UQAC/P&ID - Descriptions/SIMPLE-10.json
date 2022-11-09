@@ -1,0 +1,23 @@
+[
+    { 
+        "type:": "machine",
+        "machine": "tank",
+        "name": "TNK-07", 
+        "input":[],
+        "output":[]
+    },
+    {
+        "type":"device",
+        "device": "TT",
+        "name":"TT-13",
+        "input":[ {"name":"TNK-07"}],
+        "output":[]
+    },
+    {
+        "type":"device",
+        "device": "TT",
+        "name":"TT-14",
+        "input":[ {"name":"TNK-07"}],
+        "output":[]
+    }
+]

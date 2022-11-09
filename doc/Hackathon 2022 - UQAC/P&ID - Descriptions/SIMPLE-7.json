@@ -1,0 +1,27 @@
+[
+    { 
+        "type:": "machine",
+        "machine": "heat_exchanger",
+        "name": "",
+        "input":[
+            {
+                "type": "device",
+                "device": "valve",
+                "name": "VM-071",
+                "input":[ "Vapeur" ],
+                "output":[{"name":""}]
+            },
+            {
+                "type": "machine",
+                "machine": "pump",
+                "name": "PMP-005",
+                "input":[ "Sirop" ],
+                "output":[{"name":""}]
+            }
+        ],
+        "output": [ 
+            "Évaporation", 
+            "Condensation" 
+        ]
+    }
+]

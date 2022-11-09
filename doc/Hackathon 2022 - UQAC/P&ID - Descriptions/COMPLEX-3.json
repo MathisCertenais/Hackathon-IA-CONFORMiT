@@ -1,0 +1,185 @@
+[
+    {
+        "type":"machine",
+        "machine":"crusher",
+        "name":"Broyeur BR-100",
+        "input":[
+            {
+                "type":"device",
+                "device":"switch",
+                "name":"Sectionneur (4160V) MCC-04/8C",
+                "input":[""],
+                "output":[
+                    {"name":"Broyeur BR-100"},
+                    {"name":"Broyeur BR-200"}
+                ]
+            },
+            {
+                "type":"machine",
+                "machine":"conveyor",
+                "name":"Convoyeur CV-001",
+                "input":[],
+                "output":[{"name":"Broyeur BR-100"}]
+            },
+            {
+                "type":"device",
+                "device":"valve",
+                "name":"Valve manuelle (eau) MV-538",
+                "input":[
+                    {
+                        "type":"machine",
+                        "machine":"pump",
+                        "name":"Pompe PU-636",
+                        "input":[
+                            {
+                                "type":"device",
+                                "device":"switch",
+                                "name":"Sectionneur local (600V) LD-601",
+                                "input":[""],
+                                "output":[{"name":"Pompe PU-636"}]
+                            },
+                            {
+                                "type":"device",
+                                "device":"valve",
+                                "name":"Valve manuelle (eau) MV-536",
+                                "input":[""],
+                                "output":[{"name":"Pompe PU-636"}]
+                            }
+                        ],
+                        "output":[{"name":"Valve manuelle (eau) MV-538"}]
+                    }
+                ],
+                "output":[
+                    {"name":"Broyeur BR-100"}
+                ]
+            }
+        ],
+        "output":[
+            {
+                "type":"device",
+                "device":"valve",
+                "name":"Valve manuelle (eau) MV-540",
+                "input":[{"name":"Broyeur BR-100"}],
+                "output":[{"name":"Réservoir TK-072"}]
+            }
+        ]
+    },
+    {
+        "type":"machine",
+        "machine":"crusher",
+        "name":"Broyeur BR-200",
+        "input":[
+            {
+                "type":"device",
+                "device":"switch",
+                "name":"Sectionneur (4160V) MCC-04/8C",
+                "input":[""],
+                "output":[
+                    {"name":"Broyeur BR-100"},
+                    {"name":"Broyeur BR-200"}
+                ]
+            },
+            {
+                "type":"machine",
+                "machine":"conveyor",
+                "name":"Convoyeur CV-002",
+                "input":[],
+                "output":[{"name":"Broyeur BR-200"}]
+            },
+            {
+                "type":"device",
+                "device":"valve",
+                "name":"Valve manuelle (eau) MV-539",
+                "input":[
+                    {
+                        "type":"machine",
+                        "machine":"pump",
+                        "name":"Pompe PU-646",
+                        "input":[
+                            {
+                                "type":"device",
+                                "device":"switch",
+                                "name":"Sectionneur local (600V) LD-602",
+                                "input":[""],
+                                "output":[{"name":"Pompe PU-646"}]
+                            },
+                            {
+                                "type":"device",
+                                "device":"valve",
+                                "name":"Valve manuelle (eau) MV-537",
+                                "input":[""],
+                                "output":[{"name":"Pompe PU-646"}]
+                            }
+                        ],
+                        "output":[{"name":"Valve manuelle (eau) MV-539"}]
+                    }
+                ],
+                "output":[
+                    {"name":"Broyeur BR-200"}
+                ]
+            }
+        ],
+        "output":[
+            {
+                "type":"device",
+                "device":"valve",
+                "name":"Valve manuelle (eau) MV-541",
+                "input":[{"name":"Broyeur BR-200"}],
+                "output":[{"name":"Réservoir TK-072"}]
+            }
+        ]
+    },
+    {
+        "type":"machine",
+        "machine":"tank",
+        "name":"Réservoir TK-072",
+        "input":[
+            {"name":"Valve manuelle (eau) MV-540"},
+            {"name":"Valve manuelle (eau) MV-541"}
+        ],
+        "output":[
+            {
+                "type":"device",
+                "device":"valve",
+                "name":"Valve manuelle (eau) MV-560",
+                "input":[{"name":"Réservoir TK-072"}],
+                "output":[
+                    {
+                        "type":"machine",
+                        "machine":"pump",
+                        "name":"Pompe PU-650",
+                        "input":[
+                            {
+                                "type":"device",
+                                "device":"switch",
+                                "name":"Sectionneur local (4160V) LD-610",
+                                "input":[""],
+                                "output":[
+                                    {"name":"Pompe PU-650"}
+                                ]
+                            },
+                            {"name":"Valve manuelle (eau) MV-560"}
+                        ],
+                        "output":[
+                            {
+                                "type":"device",
+                                "device":"valve",
+                                "name":"Valve manuelle (eau) MV-561",
+                                "input":[{"name":"Pompe PU-650"}],
+                                "output":[
+                                    {
+                                        "type":"machine",
+                                        "machine":"classifier",
+                                        "name":"Classificateur hydraulique CH-016",
+                                        "input":[{"name":"Valve manuelle (eau) MV-561"}],
+                                        "output":["Eau + Résidus", "Boue"]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

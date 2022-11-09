@@ -1,0 +1,25 @@
+[
+    { 
+        "type:": "machine",
+        "machine": "pump",
+        "name": "",
+        "input":[
+            {
+                "type": "device",
+                "device": "valve",
+                "name": "",
+                "input":["Sirop"],
+                "output":[{"name":""}]
+            }
+        ],
+        "output": [
+            {
+                "type": "device",
+                "device": "valve",
+                "name": "",
+                "input":[{"name":""}],
+                "output":["Sirop"]
+            }
+        ]
+    }
+]

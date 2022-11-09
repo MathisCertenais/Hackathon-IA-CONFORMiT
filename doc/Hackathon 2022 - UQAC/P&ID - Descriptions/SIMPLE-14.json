@@ -1,0 +1,25 @@
+[
+    {
+        "type":"machine",
+        "machine":"tank",
+        "name":"",
+        "input":[
+            {
+                "type:": "machine",
+                "machine": "agitator",
+                "name": "",
+                "input":[
+                    {
+                        "type": "device",
+                        "device": "switch",
+                        "name": "SL-121",
+                        "input":["120 V"],
+                        "output":[{"name":""}]
+                    }
+                ],
+                "output": []
+            },
+            "Pâte"
+        ]
+    }
+]

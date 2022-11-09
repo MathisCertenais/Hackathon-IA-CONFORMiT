@@ -1,0 +1,32 @@
+[
+    { 
+        "type:": "machine",
+        "machine": "furnace",
+        "name": "",
+        "input":[
+            {
+                "type": "device",
+                "device" : "valve",
+                "name" : "VL-56",
+                "input": [ "Air"],
+                "output": [ { "name": ""}]
+            },
+            {
+                "type": "device",
+                "device" : "valve",
+                "name" : "VM-39",
+                "input": [ {
+                    "type":"device",
+                    "device": "flowmeter",
+                    "name": "",
+                    "input": [ "Carburant"],
+                    "output:": [ { "name": "VM-39"}]
+                }],
+                "output": [ { "name": ""}]
+            }
+        ],
+        "output": [
+            "Vers le processus"
+        ]
+    }
+]

@@ -1,0 +1,25 @@
+[
+    {
+        "type": "machine",
+        "machine": "compressor",
+        "name": "CMP-001",
+        "input":[
+            {
+                "type": "device",
+                "device" : "valve",
+                "name" : "CMP-001-MV-001",
+                "input": [ "Air"],
+                "output": [ { "name": "CMP-001"}]
+            }
+        ],
+        "output":[
+            {
+                "type": "device",
+                "device" : "valve",
+                "name" : "CMP-001-MV-002",
+                "input": [ { "name": "CMP-001"}],
+                "output": [ "Compressed Air"]
+            }
+        ]
+    }
+]
