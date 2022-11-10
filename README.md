@@ -11,13 +11,13 @@ La detection d'un symbol suit ces étapes :
 - Comparaison des histogrammes (fonction de cout)
 - Sauvegarde et suppression du symbol détecté en question
 
-## Exemple dectection #
+## Exemple detection #
 
 
 https://user-images.githubusercontent.com/98732552/201126597-3819de00-17bf-4839-ba31-47b168eb7477.mp4
 
 
-### Lancement ###
+### Lancement HOG ###
 - Ouvrir 'test2.py'
 - S'assurer d'etre dns le bon dossier 'HOG'
 - Lancement du .py
