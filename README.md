@@ -12,7 +12,7 @@ La detection d'un symbol suit ces étapes :
 - Sauvegarde et suppression du symbol détecté en question
 
 ## Exemple detection #
-![Capture d'écran_20221106_072426](https://user-images.githubusercontent.com/98732552/201128761-7fe5ae57-1497-453d-bae2-1a1350ac5f2a.png | width=100)
+![Capture d'écran_20221106_072426](https://user-images.githubusercontent.com/98732552/201128761-7fe5ae57-1497-453d-bae2-1a1350ac5f2a.png) <width=50% height=50%>
 ![Capture d'écran_20221106_073637](https://user-images.githubusercontent.com/98732552/201128806-e59049e0-6da5-4852-bac1-eb64696d41b6.png)
 ![Capture d'écran_20221106_070224](https://user-images.githubusercontent.com/98732552/201128917-fa240868-3427-4f33-b2c7-021a282a0a1d.png)
 ![Capture d'écran_20221106_071617](https://user-images.githubusercontent.com/98732552/201128997-af69d8c6-9c1a-4bf5-b4a6-a270ad0da92f.png)
